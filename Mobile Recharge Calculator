@@ -1,0 +1,21 @@
+
+function recharge() {
+
+    let name = document.getElementById("name").value;
+
+    let mobile = document.getElementById("mobile").value;
+
+    let plan = Number(document.getElementById("plan").value);
+
+    if (name === "" || mobile.length !== 10 || plan === 0) {
+
+        alert("Please enter valid details");
+        return;
+    }
+
+    document.getElementById("result").innerHTML =
+        "Customer Name: " + name +
+        "<br>Mobile Number: " + mobile +
+        "<br>Recharge Plan: ₹" + plan +
+        "<br>Recharge Status: Successful";
+}
